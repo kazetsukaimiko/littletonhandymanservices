@@ -1,0 +1,36 @@
+#set( $pictureId = $picture.getPictureIdString() )
+<div class="picture">
+  <a href="$context.getContextPath()/pictures/$pictureId"><div class="pictureImg" style="background-image: url('$context.getContextPath()/pictures/$pictureId');"></div></a>
+  <div class="info">
+    <table>
+      <tbody>
+        <form action="$context.getContextPath()/pictures/edit/$pictureId" method="post"><!-- enctype="multipart/form-data"> -->
+          <tr>
+            <td>Filename</td>
+            <td><input type="text" name="pictureFilename" value="$picture.getFilename()" disabled="true" /></td>
+          </tr>
+          <tr>
+            <td>Title</td>
+            <td><input type="text" name="pictureTitle" value="$picture.getTitle()" /></td>
+          </tr>
+          <tr>
+            <td>Description</td>
+            <td><input type="text" name="pictureDescription" value="$picture.getDescription()" /></td>
+          </tr>
+          <tr>
+            <td><select><option value="homePanel">Home</option><option value="constructionPanel">Construction</option><option value="paintingPanel">Painting</option><option value="yardPanel">Yard</option></select></td>
+            <td><input type="submit" name="pictureSubmit" value="Save" /></td>
+          </tr>
+        </form>
+        <tr>
+          <td>
+          <form action="$context.getContextPath()/pictures/delete/$pictureId" method="GET">
+            <input type="submit" name="pictureDelete" value="Delete" />
+          </form>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

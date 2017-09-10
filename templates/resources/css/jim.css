@@ -1,0 +1,527 @@
+body {
+	margin: 0px;
+ 	padding: 0px;
+	background-color:#000000;
+	cursor: default;
+}
+
+.superFrame {
+/*	background-color:#AAAAFF;*/
+	position: absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom: 0px;
+/*	top:20px;
+	bottom:20px;
+	width: 1024px;
+	left: 50%;
+	margin-left: -512px;
+	border: 1px solid white;
+        box-shadow: 0 0 12px 2px white;*/
+}
+
+.topNav {
+	position: absolute;
+/*
+	background-color:#FFAAFF;
+*/
+	background-image:url('$contextPath/assets/images/wood_planks_90c.jpg');
+	background-size: 100% Auto;
+	top:0px;
+	left:0px;
+	right:0px;
+	height:130px;
+/*	border-bottom: 1px solid white;*/
+
+	box-shadow:0px 5px 10px #000000;
+	z-index:10;
+}
+
+.topLogoContainer {
+	background:black;	
+	border-right: 1px solid #E3C69D;
+	position:absolute;
+	left:0px;
+	top:0px;
+	height:129px;
+	width: 150px;
+}
+.topLogo {
+	height: 100%;
+}
+
+.topLogo.topExperiment {
+	position: absolute;
+	left: 50px;
+}
+
+@font-face {
+ font-family: brushstr;
+ src: url('$contextPath/assets/bin/brushstr.ttf');
+}
+
+@font-face {
+ font-family: goudyo;
+ src: url('$contextPath/assets/bin/goudyo.ttf');
+}
+
+.topTitle {
+	position:absolute;
+/*	left:582px;*/
+/*	margin-left:-323px;*/
+
+
+	margin-left:auto;
+	margin-right:auto;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	text-align: center;
+	color: #F0F2B3;
+	font-size: 350%;
+	
+	font-family: goudyo;
+	font-weight: bold;
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;  
+}
+
+.topMission {
+	position: absolute;
+/*
+	left:582px;
+*/
+
+	left: 0px;
+	right: 0px;
+	text-align: center;
+
+
+/*
+	margin-left:-285px;
+*/
+	margin-left:auto;
+	margin-right:auto;
+
+
+	top:65px;
+/*
+	width: 778px;
+*/
+	color: #F0F2B3;
+	font-weight: bold;
+	font-size: 128%;
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;  
+}
+
+.topContact {
+/*
+	background: black;
+	opacity: 0.8;
+	border-top-left-radius: 8px 8px;
+	border: 1px solid white;
+*/
+
+	background-image: url('$contextPath/assets/images/woodplank.png');
+	background-position: left top;
+/*	background-attachment: fixed;*/
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	box-shadow: -3px -3px 10px #000000;
+
+	
+	position: absolute;
+	right:0px;
+	bottom: 0px;
+	text-align:center;
+	
+
+	padding: 3px;
+
+/*
+	width: 198px;
+	color: #F0F2C3;
+*/
+
+	color: white;
+	font-weight: bold;
+	font-size:100%;
+
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;  
+
+}
+
+.handyManLogoFrame {
+	position; absolute;;
+	width: 471px;
+/*	height: 603px;
+	background-image: url('$contextPath/assets/images/wood-table-texture-2.jpg');
+	border: 1px solid black;
+	border-radius: 25px;
+	margin: 50px;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.handyManLogoContainer {
+	background-color: white;
+	position: relative;
+	margin-left:10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 15px solid #2F318C;
+}
+
+.handyManLogoText {
+	position: relative;
+	font-size: 65px;
+	color: #2f318C;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 90%;
+}
+
+.handyManLogoImg {
+	position: relative;
+	text-align: right;
+
+}
+.handyManLogoImg img {
+	max-width: 270px;
+	display: inline-block;
+}
+
+.handyManLogoTeleWelcome {
+	position: relative;
+	width: 100%;
+	font-size: 200%;
+	font-family: sans-serif;
+	color: #2F318C;
+}
+
+.handyManLogoTele {
+	position: relative;
+	background-color: #2F318C;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 400%;
+	font-weight: bold;
+	text-shadow: 2px 2px #000000;
+
+}
+
+.superspaced {
+	letter-spacing: 7px;
+}
+
+.spaced {
+	letter-spacing: 3px;
+}
+
+.notspaced {
+	letter-spacing: normal;
+}
+
+.sansserif {
+	font-family: sans-serif;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.white {
+	color: white;
+}
+
+.topContact a {
+	color: #F0F2B3;
+}
+
+.sideNav {
+	position: absolute;
+/*
+	background-color:#FFFFAA;
+*/
+	background-image:url('$contextPath/assets/images/wood_planksr.jpg');
+	background-size: auto 1000px;
+	top:130px;
+	bottom:25px;
+	left:0px;
+	width:256px;
+
+	box-shadow:5px 0px 10px #000000;
+	z-index:9;
+
+	
+}
+
+ul.sideNavigation {
+	list-style: none;
+	padding-left:0px;
+	color: #F0F2B3;
+/*
+	font-size: 175%;
+*/
+
+	font-size: 25px;
+	text-align: center;
+	font-family: brushstr;
+        text-shadow:
+        -1px -1px 0 #7273b5,
+        1px -1px 0 #7273b5,
+        -1px 1px 0 #7273b5,
+        1px 1px 0 #7273b5;  
+}
+
+ul.sideNavigation a {
+	color: #F0F2B3;
+	font-family: brushstr;
+	text-decoration: none;
+/*        text-shadow:
+        -1px -1px 0 #7273b5,
+        1px -1px 0 #7273b5,
+        -1px 1px 0 #7273b5,
+        1px 1px 0 #7273b5;  */
+        text-shadow:
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #000000,
+        1px 1px 0 #000000;  
+	line-height: 25px;
+	position: absolute;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+ul.sideNavigation a:hover {
+	color: #F2F4B5;
+	text-decoration:underline;
+
+        text-shadow:
+        -1px -1px 0 #444444,
+        1px -1px 0 #444444,
+        -1px 1px 0 #444444,
+        1px 1px 0 #444444;  
+}
+
+
+
+ul.sideNavigation li div {
+}
+
+ul.sideNavigation li {
+	position: relative;
+	cursor: pointer;
+	margin-bottom:35px;
+/*	border-bottom: 2px solid #F0F2B3;*/
+	padding-top: 5px;
+	padding-bottom: 5px;
+/*	box-shadow:0px 0px 10px #000000 inset;*/
+	box-shadow:0px 0px 10px #000000;
+	
+	background-image: url('$contextPath/assets/images/woodplank.png');
+	background-position: right top;
+/*	background-attachment: fixed;*/
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	height: 55px;
+}
+
+ul.sideNavigation li:hover {
+	cursor: pointer;
+        text-shadow:
+        -1px -1px 0 #FFF,
+        1px -1px 0 #FFF,
+        -1px 1px 0 #FFF,
+        1px 1px 0 #FFF;  	
+
+	box-shadow:0px 5px 20px #000000 inset;
+}
+
+.crumbs {
+	position: absolute;
+	color: rgb(240, 242, 179);
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;  
+	background-image:url('$contextPath/assets/images/wood_planks_90c.jpg');
+	background-size: 100% Auto;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	height:25px;
+	font-size: 115%;
+
+	box-shadow:-5px 0px 10px #000000;
+	z-index:10;
+
+}
+
+.crumbCommon {
+	margin-top:3px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.crumbInsured {
+	position: absolute;
+	left:50%;
+	margin-left:-39px;
+}
+.crumbContractor {
+	position: absolute;
+	right:0px;
+}
+.crumbContact {
+	position: absolute;
+	left:0px;
+}
+
+
+.contentPane {
+	position: absolute;
+
+	background-color:#000000;
+
+        
+	background-image:url('$contextPath/assets/images/autumn-2008blur.jpg');
+	background-size: cover;
+ 	background-attachment:fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+        
+
+	overflow-y: scroll;
+
+	/*box-shadow:5px 5px 5px #000000 inset;*/
+
+
+	top:130px;
+	bottom:25px;
+	left:256px;
+	right:0px;
+}
+
+.inlineBlock {
+	display: inline-block;
+}
+
+.compareBlock {
+/*	background-color: rgba(255,255,255,0.7);*/
+	background: url('$contextPath/assets/images/wood-table-texture-2.jpg');
+	border: 1px solid #505050;
+	border: 1px solid #F0F2B3;
+	border-radius:10px;
+	padding: 5px;
+	padding-top: 3px;
+	margin: 5px;
+	width:320px;
+	vertical-align: text-top;
+}
+
+.compareDescription {
+	color: #F0F2B3;
+
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;  
+
+}
+
+.compareImage {
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+.workgroupBlock {
+	background-color: rgba(255,255,255,0.7);
+	background-color: rgba(0,0,0,0.7);
+	border: 1px solid #505050;
+	border-radius:10px;
+	padding: 5px;
+	margin: 0px;
+}
+
+.projectBlock {
+	background-color: rgba(0,0,0,0.2);
+	position: relative;
+	border: 1px solid #505050;
+	border-radius:10px;
+	padding: 0px;
+	margin: 15px;
+}
+
+.fillBlock {
+	position:absolute;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	z-index: 0;
+	border-radius:10px;
+}
+
+.projectBlock h1 {
+/*	color: #8FC1FF; */
+
+        /*
+	background: url('$contextPath/assets/images/woodplank.png') no-repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+	
+	-webkit-text-stroke: 1px black;*/
+
+	color: #F0F2B3;
+
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;  
+
+	font-weight: bold;
+	margin-top: 0px;
+	margin-left:5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	z-index: 10;
+}
+
+.workgroupBlock h3 {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	z-index: 10;
+
+	color: #F0F2B3;
+
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;  
+
+}

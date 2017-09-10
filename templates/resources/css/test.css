@@ -1,0 +1,41 @@
+/*
+$context.getContextPath()
+*/
+div.picture {
+	width: 600px;
+	height: 150px;
+	background-color: rgba(0,0,0,.9);
+	display: inline-block;
+	position: relative;
+	border: 1px solid rgba(0,0,0,.9);
+}
+
+div.picture div.pictureImg {
+	width: 160px;
+	height: 150px;
+	position: absolute;
+	top:0px;
+	left:0px;
+	bottom: 0px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+div.picture div.info {
+	background-color: white;
+	position: absolute;
+	top:0px;
+	right:0px;
+	left:160px;
+	bottom: 0px;
+	
+}
+
+div.picture div.info table {
+	position: absolute;
+	top:0px;
+	right:0px;
+	left:0px;
+	bottom:0px;
+}

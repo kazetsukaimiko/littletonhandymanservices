@@ -1,0 +1,525 @@
+/* Littleton Handyman Services CSS */
+
+@font-face {
+  font-family: mikachan;
+  src: url('$contextPath/assets/bin/mikachan_p.otf') format("opentype");
+}
+
+@keyframes pulsate {
+from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+    
+@-webkit-keyframes pulsate {
+from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+
+.pulsate {
+  /* Chrome, Safari, Opera */
+  -webkit-animation-name: pulsate;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+  /* Standard syntax */
+  animation-name: pulsate;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+.canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #000000;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.sansserif {
+  font-family: sans-serif;
+}
+
+.background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #000000;
+  background-image: url('$contextPath/assets/images/autumn-2008blur.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+}
+
+.background.loaded {
+  opacity: 1;
+}
+
+.postLoad {
+  transition: all 1s;
+}
+
+.transition {
+  transition: all 1s;
+}
+
+.transition.fast {
+  transition: all .5s;
+}
+
+.transition.faster {
+  transition: all .25s;
+}
+
+.transition.fastest {
+  transition: all .1s;
+}
+
+.mainLogoWrapper {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  left: 25px;
+  bottom: 25px;
+  display: block;
+}
+.mainLogoWrapper:after {
+  padding-top: 56.25%;
+  
+  display: block;
+  content: '';
+}
+
+.mainLogo {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border: 15px solid #2F318C;
+  background-color: white;
+}
+
+.mainLogo .mainLogoImage {
+  position:relative;
+  background-image: url('$contextPath/assets/images/previewTwo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.mainLogoFull {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-image: url('$contextPath/assets/images/lmsFullLogo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 100;
+}
+
+.mainLogoFull.loaded {
+  top: 10px;
+  left: 50%;
+  width: 108px;
+  height: 115px;
+  margin-left: -500px;
+}
+
+.mainLogoFull.loadedDone:hover {
+  width: 400px;
+  height: 500px;
+  background-position-x: left;
+}
+
+.mainLogoFull.loadedDone {
+  transition: all .5s;
+  max-height: 90%;
+}
+
+
+.mainBar {
+  position: absolute;
+  top: -175px;
+  left: 50%;
+  margin-left: -512px;
+  width: 1024px;
+  height: 115px;
+
+  background-image: url('$contextPath/assets/images/wood_planks_90c.jpg');
+  background-size: 100% Auto;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+  border: 1px rgba(0,0,0,0.5);
+  z-index: 50;
+}
+
+.mainBar.loaded {
+  top: 10px;
+}
+
+.mainBar .mainBarName {
+  color: white;
+  font-weight: bold;
+  font-size: 42px;
+  position: absolute;
+  left: 150px;
+  text-shadow : 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black;
+  white-space: nowrap;
+}
+
+.mainBar .mainBarContact {
+  position: absolute;
+  left: 150px;
+  right: 0px;
+  text-align:center;
+  top: 55px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow : 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black;
+  
+}
+
+.mainBar .mainBarContact > a {
+  color: white;
+}
+
+.mainBar .mainBarContact > a:hover; {
+  color: white;
+}
+
+.navBar {
+  background-color: rgba(255,255,255,0.3);
+  height: 68px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: -200px;
+  text-align: center;
+  z-index:10;
+}
+
+.navBar.loaded {
+  top: 135px;
+}
+
+.navBar .navContainer {
+  position: relative;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: inline-block;
+  /* text-align: center; */
+  max-width: 1024px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.navBar .navContainer > .navButton {
+  color: white;
+  display: inline-block;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+  font-family: mikachan, sans-serif;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor:pointer;
+  background-color: rgba(255,255,255,0);
+  transition: background-color .25s;
+}
+
+.navBar .navContainer > .navButton.editing {
+  background-color: rgba(192,192,255,0.8);
+}
+
+.navBar .navContainer > .navButton:hover {
+  background-color: rgba(255,255,255,0.3);
+}
+
+.navBar .navContainer > .navButton.active {
+  background-color: rgba(255,255,255,0.3);
+}
+
+
+.scrollKiller {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  margin-left: -512px;
+  width: 1024px;
+  bottom: 0px;
+  background-color: rgba(0,0,0,0);
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.scrollKiller.loaded {
+  opacity: 1;
+  top: 0px;
+  pointer-events: auto;
+}
+
+
+.contentPane {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: -15px;
+  bottom: 0px;
+  padding-top:195px;
+  overflow: auto;
+}
+
+.scrollKiller > .contentPane {
+}
+
+.contentPane > .contentPanelContainer {
+  position: relative;
+  display:none;
+  background-color: rgba(44,44,44,1);
+  color: white;
+  margin-top:25px;
+}
+
+.contentPane > .contentPanelContainer:last-child {
+  margin-bottom: 50px;
+}
+
+
+.contentPane > .contentPanelContainer > .contentPanel {
+  position:relative;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  z-index:0;
+  min-height: 50px;
+  padding: 15px;
+  font-family: sans-serif;
+}
+
+.contentPane > .contentPanelContainer.active {
+  display: block;
+}
+
+#editPane {
+  display: none;
+}
+
+.loginPane {
+  display: none;
+  position:absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  background-color: rgba(0,0,0,0.95);
+  z-index: 200;
+}
+.loginPane.active {
+  display: block;
+}
+
+.loginPrompt {
+  width: 480px;
+  height: 240px;
+  background-color: rgba(255,255,255,0.3);
+  position: absolute;
+  top: 50%;
+  margin-top: -120px;
+  left: 50%;
+  margin-left: -240px;
+  text-align:center;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.8);
+  text-shadow: 0px 0px 3px black, 0px 0px 3px black;
+}
+
+.loginPrompt > div {
+  font-size: 24px;
+  margin-top: 24px;
+  font-family: sans-serif;
+}
+
+.loginPrompt > div.promptText {
+  font-size: 24px;
+}
+
+.loginPrompt > input {
+  background-color: rgba(0,0,0,0.3);
+  border: 1px solid white;
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  width: 90%;
+}
+
+.adminBar {
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 50px;
+  background-color: rgba(0,0,0,0.95);
+  opacity: 0.35;
+  transition: all .5s;
+  text-align: center;
+  z-index:50;
+  color:white;
+}
+.adminBar.loggedIn {
+  display: block;
+}
+
+.adminBar.loggedIn:hover {
+  bottom: 0px;
+  opacity: 1;
+}
+
+.adminBar.loggedIn.forceHover {
+  bottom: 0px;
+  opacity: 1;
+}
+
+
+.adminBar > div {
+  display: inline-block;
+  position: relative;
+  font-size:24px;
+  border-left:1px solid white;
+  height:50px;
+  min-width:50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-family: sans-serif;
+}
+
+.adminBar > div:first-child {
+  border-left: 1px solid transparent;
+}
+
+.adminBar > div.adminWelcome {
+  font-family: mikachan;
+}
+.adminBar > div.actorButton {
+  cursor: pointer;
+  background-color: rgba(255,255,255,0);
+  user-select: none;
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
+}
+
+
+.adminBar > div.actorButton:hover {
+  background-color: rgba(255,255,255,0.3);
+}
+
+.adminBar > div.actorButton.active {
+  background-color: rgba(255,255,255,0.3);
+}
+
+.adminBar > div.actorButton:active {
+  background-color: rgba(255,255,255,0.6);
+}
+
+.picturesBar {
+  position: fixed;
+  top: -400px;
+  left: 0px;
+  right: 0px;
+  height: 215px;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 115;
+  transition: all 1s;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.picturesBar.active {
+  top: 0px;
+}
+
+.picturesBar > .picture {
+  display: inline-block;
+  position: relative;
+  width: 260px;
+  height: 175px;
+  margin: 15px;
+  transition: all .25s;
+}
+.picturesBar > .picture:hover {
+  box-shadow: 0px 0px 15px 5px white;
+}
+
+
+.picturesBar > .picture.newPicture {
+  background-image: url('$contextPath/assets/images/camera-icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  border-radius: 24px;
+  width:175px;
+}
+
+.picturesBar > .picture.newPicture.drag {
+  background-image: url('$contextPath/assets/images/camera-icon-drag.png');
+}
+
+
+.picture > .deletePicture {
+  background-image: url('$contextPath/assets/images/delete.png');
+  height: 25px;
+  width: 25px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  float: right;
+  margin: 5px;
+  opacity: 0.5;
+  cursor:pointer;
+}
+
+.picture > .deletePicture:hover {
+  opacity: 1;
+}
+
+.sectionEditor {
+  display: none;
+  position: fixed;
+  height: 150px;
+  width: 450px;
+  background-color: rgba(255,255,255,1);
+  top: 50%;
+  margin-top: -75px;
+  left: 50%;
+  margin-left: -225px;
+  padding: 15px;
+}
+
+.sectionEditor.active {
+  display: block;
+}

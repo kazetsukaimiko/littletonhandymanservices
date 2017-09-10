@@ -1,0 +1,5 @@
+<ul class="sectionGroup">
+#foreach( $section in $sections )
+  <li class="section">/#foreach( $member in $section.parentHierarchy )$member.title/#end - <span style="font-weight: bold;">$section.title</span> ($section.id.toString())</li>
+#end
+</ul>

@@ -1,0 +1,6 @@
+#set( $pictureId = $picture.getPictureIdString() )
+<div class="picture datalink" data-link="$context.getContextPath()/pictures/edit/$pictureId" >
+  <div class="pictureTitle">$picture.getTitle()</div>
+  <div class="pictureImage" style="background-image: url('$context.getContextPath()/pictures/$pictureId');"></div>
+  <div class="pictureDescription">$picture.getDescription()</div>
+</div>

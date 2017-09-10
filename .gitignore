@@ -1,0 +1,15 @@
+#
+
+*~
+DEADJOE
+*.class
+*.jar
+*.war
+*.ear
+target/*
+*/target/*
+*/*/target/*
+.idea
+.idea/*
+*.iml
+relayctl-api/dependency-reduced-pom.xml

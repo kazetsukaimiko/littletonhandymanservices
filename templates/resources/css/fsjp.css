@@ -1,0 +1,209 @@
+.absoluteFill {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: #000000;
+}
+
+.fades {
+	transition: all 1s ease-in-out;
+}
+
+.fades.fast {
+	transition: all 750ms ease-in-out;
+}
+
+.fades.faster {
+	transition: all 500ms ease-in-out;
+}
+
+.fades.fastest {
+	transition: all 250ms ease-in-out;
+}
+
+.background {
+	background: linear-gradient(to bottom, #269AFF 0%, #95E5EC 100%);
+	z-index:0;
+}
+
+.backgroundFader {
+	background-color: black;
+	opacity: 0.4;
+	z-index:1;
+}
+
+.backgroundFader.inputFocus {
+	opacity: 0.8;
+}
+
+.canvas {
+	z-index:2;
+	padding: 0px;
+	opacity:0;
+	transition: opacity 1s;
+	-webkit-transition: opacity 1s;
+}
+
+.canvas.visible {
+	opacity: 1;
+}
+
+.canvas .topPane {
+	position: absolute;
+	top:0px;
+	left:0px;
+	right: 0px;
+	height: 60px;
+	margin: 0px;
+	padding: 0px;
+	overflow: none;
+}
+
+
+.canvas .topPane .searchBar {
+	position: absolute;
+	top:0px;
+	right:0px;
+	left: 0px;
+	bottom: 0px;
+	margin-left: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-right: 25px;
+}
+
+.canvas .topPane .searchBar .searchBarInput {
+	width:100%;
+	height:100%;
+	margin:none;
+	background-color:transparent;
+	color: rgba(255,255,255,1);
+	border: 1px solid rgba(255,255,255,1);
+	padding-left:5px;
+	padding-right:5px;
+	opacity:0.6;
+	outline:none;
+}
+
+.canvas .topPane .searchBar .searchBarInput:hover {
+	opacity:1;
+}
+
+.canvas .topPane .searchBar .searchBarInput:focus {
+	opacity:1;
+	text-shadow: 0px 0px 3px rgba(255,255,255,1);
+	box-shadow: 0px 0px 15px 5px rgba(255,255,255,1);
+}
+
+.canvas .contentPane {
+	position: absolute;
+	top: 60px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	overflow: hidden;
+}
+
+.canvas .contentPane .searchPane {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	color: white;
+	font-size: 12px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.canvas.inputFocus .contentPane {
+	pointer-events: none;
+}
+
+.canvas.inputFocus .contentPane .searchPane {
+	color: transparent;
+	text-shadow: 0px 0px 15px white;
+}
+
+.canvas .contentPane .searchPane table.assetTable {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.canvas .contentPane .searchPane table.assetTable tbody tr {
+	transition: 1s border-color ease-in-out;
+}
+
+.canvas .contentPane .searchPane table.assetTable tbody tr:hover {
+	text-shadow: 0px 0px 5px #white;
+}
+
+.canvas .contentPane .searchPane table.assetTable tbody tr td {
+	padding: 5px;
+}
+
+.canvas .contentPane .searchPane table.assetTable tbody tr td .path {
+	color: rgba(196,196,196,0.95);
+}
+
+.canvas.inputFocus .contentPane .searchPane table.assetTable tbody tr td .path {
+	color: transparent;
+	text-shadow: 0px 0px 15px rgba(196,196,196,0.95);
+}
+
+.canvas .contentPane .searchPane table.assetTable tbody tr td img {
+	max-height:50px;
+/*	transition: 1s opacity ease-in-out;*/
+}
+
+.canvas .contentPane .searchPane table.assetTable tbody tr td a {
+	color: white;
+	text-decoration: none;
+}
+
+.canvas.inputFocus .contentPane .searchPane table.assetTable tbody tr td a {
+	color: transparent;
+	text-shadow: 0px 0px 15px white;
+}
+
+.canvas.inputFocus .contentPane .searchPane table.assetTable tbody tr td img {
+	opacity: 0.3;
+}
+
+
+
+.loadingIcon {
+	position:fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-color: rgba(0,0,0,0.7);
+	background-image:url('$context.getContextPath()/resources/images/loading.gif');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100px 100px;
+	z-index:10;
+}
+
+.loadingIcon.hidden {
+	opacity: 0;
+}
+
+.loadingIcon.hidden.gone {
+	display: none;
+	pointer-events: none;
+}
+
+.ajaxLink {
+	cursor: pointer;
+}

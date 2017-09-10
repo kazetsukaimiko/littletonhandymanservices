@@ -1,0 +1,23 @@
+#set( $thumbnailAble = ["video", "image"] )
+<table class="assetTable">
+  <tbody>
+#foreach( $asset in $assets )
+#set ( $playLink = $context.getContextPath() + "/filesystem/play/" + $asset.getId().toString())
+#set ( $playNativeLink = $context.getContextPath() + "/filesystem/playNative/" + $asset.getId().toString())
+    <tr>
+#if ($thumbnailAble.contains($asset.getContentClass()))
+      <td class="fades fastest"><img class="imageSwap" src="$context.getContextPath()/resources/images/loading.gif" data-src="$context.getContextPath()/filesystem/thumbnail/$asset.getId().toString()" alt="" /></td>
+#else
+      <td class="fades fastest"></td>
+#end
+      <td class="fades fastest">
+      Local - $qd.element("a").attr("class","fader fastest ajaxLink").attr("data-link", $playNativeLink).child($asset.getFile().getName()).serialize()<br />
+      Remote - $qd.element("a").attr("class","fader fastest").attr("href", $playLink).child($asset.getFile().getName()).serialize()<br />
+      <span class="path">$asset.getFile().getParent()</span>
+      </td>
+      <td class="fades fastest">$asset.getMetadata().fileSize()</td>
+      <td class="fades fastest">$asset.getContentType()</td>
+    </tr>
+#end
+  <tbody>
+</table>

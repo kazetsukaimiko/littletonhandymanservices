@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Littleton Handyman Services</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Home repairs,pressure washing,interior painting,exterior painting,Lawn care,gutter cleaning,spring cleaning,basement clean up,mailbox,woodwork,plumbing,plant,rotten wood,cabinets,masonry,mulch,decks,sheds,face board,tree,bathroom remodel,install hardware,install closet organizer,stain,trim replacement,grout tile,bulkhead replacement,kitchen,install pavers,snow removal,shutter replacement,,Acton,Ayer,Bedford,Belmont,Boxboro,Burlington,Carlisle,Chelmsford,Concord,Groton,Lexington,Lincoln,Littleton,Maynard,North Chelmsford,Pepperell,Shirley,Harvard">
+    <meta name="zipcode" contents="01720,01432,01730,02478,01719,01803,01741,01824,01742,01450,02420,01773,01460,01754,01863,01463,01464,01451">
+    <link type="image/png" rel="icon" href="$contextPath/assets/images/littletonhmslogo_test.png" />
+    <link type="text/css" href="$contextPath/resources/css/littletonhandyman.css" rel="stylesheet" />
+    <script>window.contextPath = '$contextPath';</script>
+#if($tryLogin)
+    <script>window.adminMode = true;</script>
+    <script type="text/javascript" src="$contextPath/assets/js/ckeditor/ckeditor.js"></script>
+    <script>
+	CKEDITOR.timestamp = +new Date;
+	CKEDITOR.disableAutoInline = true;
+    </script>
+#end
+    <script type="text/javascript" src="$contextPath/resources/js/fsajax.js"></script>
+    <script type="text/javascript" src="$contextPath/resources/js/genericHelpers.js"></script>
+    <script type="text/javascript" src="$contextPath/resources/js/littletonhandyman.js"></script>
+#if($tryLogin)
+    <script type="text/javascript" src="$contextPath/resources/js/admin.js"></script>
+#end
+  </head>
+  
+#if($tryLogin)
+  <body id="bodyTag" onload="setupUI();tryLogin();">
+#else
+  <body id="bodyTag" onload="setupUI();">
+#end
+    <div class="canvas">
+      <div class="background postLoad transition"></div>
+      <div class="mainLogoFull postLoad transition"></div>
+      <div class="mainBar postLoad transition">
+        <div class="mainBarName sansserif">LITTLETON HANDYMAN SERVICES</div>
+      	<div class="mainBarContact sansserif">Contact Us By Phone At: 978-204-4059<br />Or by Email At: <a href="mailto:littletonhms@gmail.com">littletonhms@gmail.com</a></div>
+      </div>
+      <div class="navBar postLoad transition">
+        <div id="navContainer" class="navContainer">
+          <div class="navButton" data-id="1234" data-description="">Home</div>
+          <div class="navButton">Construction</div>
+          <div class="navButton">Painting</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="scrollKiller" class="scrollKiller transition faster">
+      <div id="contentPane" class="contentPane">
+        <div class="contentPanel">TEST PANEL</div>
+      </div>
+    </div>
+
+
+#if($tryLogin)
+    <div class="adminBar postLogin">
+      <div class="adminWelcome">Welcome, Jim.</div>
+      <div class="actorButton showPictures">Show Pictures</div>
+      <div class="actorButton newSection">New Section</div>
+      <div class="actorButton newPanel">New Panel</div>
+    </div>
+    <div class="picturesBar"></div>
+
+    <div id="sectionEditor" class="sectionEditor"></div>
+
+    <div id="loginPane" class="loginPane">
+      <div id="loginPrompt" class="loginPrompt">
+        <div class="promptText">Login</div>
+        <div class="userNameText ">Username</div>
+        <input class="authenticator" name="username" id="usernameInput" type="text" autocomplete="off"></input>
+        <div class="passwordText ">Password</div>
+        <input class="authenticator" name="password" id="passwordInput" type="password" autocomplete="off"></input>
+      </div>
+    </div>
+
+#end
+
+    
+
+  </body>
+</html>

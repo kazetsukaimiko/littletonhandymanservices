@@ -1,0 +1,18 @@
+/*
+$context.getContextPath()
+*/
+div.picture {
+	width: 800px;
+	height: 480px;
+	background-color: rgba(0,0,0,.9);
+}
+
+div.picture img.pictureImg {
+	max-width: 100px;
+	max-height: 100px;
+	display: inline-block;
+}
+
+div.picture div.info {
+	display: inline-block;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Index</title>
+    <link href="$context.getContextPath()/velocity/css/fsjp.css" rel="stylesheet" type="text/css" />
+    <script src="$context.getContextPath()/velocity/js/site.js"></script>
+    <script src="$context.getContextPath()/velocity/js/genericHelpers.js"></script>
+    <script src="$context.getContextPath()/velocity/js/ajaxRequest.js"></script>
+  </head>
+  <body class="absoluteFill" onload="startup()">
+    <div id="background" class="background absoluteFill"></div>
+    <div id="backgroundFader" class="fades fastest backgroundFader absoluteFill"></div>
+    <div id="canvas" class="canvas absoluteFill fades fastest">
+      <div id="topPane" class="topPane">
+      	<div class="searchBar">
+      	  <input id="searchBarInput" class="searchBarInput fades fastest" type="text" name="searchBar"></input>
+      	</div>
+      </div> 
+      <div id="contentPane" class="contentPane">
+      	<div class="searchPane" id="searchPane"></div>
+      </div>
+    </div>
+    <div id="loadingIcon" class="loadingIcon fades fastest"></div>
+  </body>
+</html>

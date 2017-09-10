@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>$asset.getFile().getName()</title>
+
+  <!-- Chang URLs to wherever Video.js files will be hosted -->
+  <link href="$context.getContextPath()/resources/video-js/video-js.css" rel="stylesheet" type="text/css">
+  <!-- video.js must be in the <head> for older IEs to work. -->
+  <script src="$context.getContextPath()/resources/video-js/video.js"></script>
+
+  <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+  <script>
+    videojs.options.flash.swf = "$context.getContextPath()/resources/video-js/video-js.swf";
+  </script>
+
+
+</head>
+<body>
+
+    <!--
+    <source src="$context.getContextPath()/filesystem/download/$asset.getId().toString()" type='$asset.getContentType()' />
+    <track kind="captions" src="$context.getContextPath()/filesystem/transcode/$asset.getId().toString()" srclang="en" label="English Cap"></track>
+    <track kind="subtitles" src="$context.getContextPath()/filesystem/transcode/$asset.getId().toString()" srclang="en" label="English Sub" default></track>
+    -->
+
+  <video id="video:$asset.getId().toString()" class="video-js vjs-default-skin" controls preload="none"
+      poster="$context.getContextPath()/filesystem/thumbnail/$asset.getId().toString()"
+      data-setup="{}"
+      width="640"
+      height="360">
+    <source src="$context.getContextPath()/filesystem/transcode/$asset.getId().toString()" type='video/webm' />
+    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+  </video>
+<!--
+    <track kind="subtitles" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+-->
+
+</body>
+</html>

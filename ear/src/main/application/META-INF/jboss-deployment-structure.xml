@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this file goes into the EAR META-INF, *not* the WAR -->
+<jboss-deployment-structure> 
+  <deployment>
+    <dependencies>
+      <!-- Hibernate -->
+      <!--
+      <module name="org.hibernate" export="true" />
+      -->
+      
+      <!-- EclipseLink -->
+      <!--
+      <module name="org.eclipse.persistence" export="true" />
+      <module name="org.jboss.as.jpa.spi" export="true" />
+      -->
+    
+      <module name="com.google.guava" export="true" /> 
+      <module name="javax.faces.api" export="true" />
+
+      <module name="org.apache.log4j" export="true" /> 
+      <module name="org.apache.commons.beanutils" export="true" /> 
+      <module name="org.apache.commons.io" export="true" /> 
+      <module name="org.apache.commons.lang" export="true" /> 
+      <module name="org.apache.velocity" export="true" />
+      <!--
+      <module name="org.apache.commons.collections" export="true" /> 
+      -->
+      <module name="org.jboss.resteasy.resteasy-cdi" export="true" />
+      <module name="org.jboss.resteasy.resteasy-jaxrs" export="true" />
+      <module name="org.jboss.resteasy.resteasy-jaxb-provider" export="true" />
+      <module name="org.jboss.resteasy.resteasy-jackson-provider" export="true" />
+
+      <!--
+      <module name="org.codehaus.jackson.jackson-core-asl" export="true" />
+      <module name="org.codehaus.jackson.jackson-mapper-asl" export="true" />
+      <module name="org.codehaus.jackson.jackson-jaxrs" export="true" />
+      -->
+      <module name="com.fasterxml.jackson.core.jackson-core" export="true" />
+      <module name="com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider" export="true" />
+
+      <!--
+      <module name="org.jboss.janex" export="true" />
+      -->
+    </dependencies>
+    
+  </deployment> 
+  
+</jboss-deployment-structure>

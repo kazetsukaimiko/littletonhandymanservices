@@ -1,0 +1,13 @@
+#set( $pictureId = $picture.getPictureIdString() )
+<div class="picture">
+  <a href="$context.getContextPath()/pictures/$pictureId"><div class="pictureImg" style="background-image: url('$context.getContextPath()/pictures/$pictureId');"></div></a>
+  <div class="info">
+    <h3>REALLY Delete this Image?</h3>
+    <form action="$context.getContextPath()/pictures/delete/$pictureId" method="POST">
+      <input type="submit" name="pictureDelete" value="Delete" />
+    </form>
+    <form action="$context.getContextPath()/pictures/" method="GET">
+      <input type="submit" name="pictureDelete" value="Cancel" />
+    </form>
+  </div>
+</div>

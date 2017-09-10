@@ -1,0 +1,15 @@
+#set( $pictureId = $picture.getPictureIdString() )
+<div class="shadow">
+  <!-- $context.getContextPath()/pictures/create" method="post" enctype="multipart/form-data" -->
+  <div class="picture extended">
+    <div class="pictureTitle"><input type="text" name="pictureTitle" value="" placeholder="Picture Title" /></div>
+    <div class="pictureImage selectPicture">
+      <label for="uploadedFile">
+        <img src="$context.getContextPath()/resources/images/camerae.png" />
+      </label>
+      <input type="file" id="uploadedFile" name="uploadedFile" size="50" />
+    </div>
+    <div class="pictureDescription"><input type="text" name="pictureDescription" value="" placeholder="Description" /></div>
+    <div class="pictureCategory"><select><option value="selectSomething"></option><option value="homePanel">Home</option><option value="constructionPanel">Construction</option><option value="paintingPanel">Painting</option><option value="yardPanel">Yard</option></select></div>
+  </div>
+</div>

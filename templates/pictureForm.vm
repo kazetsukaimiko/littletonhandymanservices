@@ -1,0 +1,9 @@
+<html>
+  <body>
+    <h1>JAX-RS Upload Form @ $context.getContextPath()</h1>
+    <form action="$context.getContextPath()/pictures/" method="post" enctype="multipart/form-data">
+      <p>Select a file : <input type="file" name="uploadedFile" size="50" /> </p>
+      <input type="submit" value="Upload It" />
+    </form>
+  </body>
+</html>
